@@ -2,12 +2,7 @@ Start-Transcript -Path "Logs\chocoInstall$(Get-Date -UFormat "%Y-%m-%d@%Hh-%Mm-%
 Set-ExecutionPolicy -Scope Process -ExecutionPolicy unrestricted
 Set-ExecutionPolicy Bypass -Scope Process -Force; [System.Net.ServicePointManager]::SecurityProtocol = [System.Net.ServicePointManager]::SecurityProtocol -bor 3072; iex ((New-Object System.Net.WebClient).DownloadString('https://community.chocolatey.org/install.ps1'))
 
-choco install -y googlechrome
-choco install -y brave
-choco install -y 7zip
-Choco install -y zoom
-Choco install -y vscode
-choco install -y vlc
+
 choco install -y chocolateygui
 Choco install -y chocolatey-core.extension
 choco install -y choco-upgrade-all-at-startup
@@ -20,10 +15,6 @@ choco install -y anki --params "/CreateDesktopIcon"
 # choco install -y notion
 # choco install -y obsidian
 
-Choco install -y git
-choco install -y python
-Choco install -y python3
-Choco install -y terraform
 Choco install -y terragrunt
 Choco install -y opentofu
 Choco install -y kubernetes-cli
